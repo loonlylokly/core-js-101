@@ -64,8 +64,12 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  let sum = 0;
+  for (let i = n1; i <= n2; i += 1) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -83,8 +87,11 @@ function getSumBetweenNumbers(/* n1, n2 */) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  if ((a + b) <= c) return false;
+  if ((a + c) <= b) return false;
+  if ((c + b) <= a) return false;
+  return true;
 }
 
 /**
@@ -146,10 +153,15 @@ function doRectanglesOverlap(/* rect1, rect2 */) {
  *
  * @example:
  *   { center: { x:0, y:0 }, radius:10 },  { x:0, y:0 }     => true
- *   { center: { x:0, y:0 }, radius:10 },  { x:10, y:10 }   => false
+ *   { center: { x:0, y:0 }, :10 },  { x:10, y:10 }   => false
  *
  */
 function isInsideCircle(/* circle, point */) {
+  // if ((circle.center.x + circle.radius) <= point.x) return false;
+  // if ((circle.center.y + circle.radius) <= point.y) return false;
+  // if ((circle.center.x - circle.radius) >= point.x) return false;
+  // if ((circle.center.y - circle.radius) >= point.y) return false;
+  // return true;
   throw new Error('Not implemented');
 }
 
